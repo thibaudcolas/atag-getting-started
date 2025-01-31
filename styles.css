@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+body {
+  font-size: clamp(1rem, calc(2dvmax + 1rem), 5dvmin);
+  --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 80%);
+  --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 60%);
+  color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
+  --safe-area: 4vmin;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  &,
+  & > * {
+    min-inline-size: 100dvi;
+    block-size: 100dvb;
+    scroll-snap-align: start;
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+
+pre {
+  font-size: 1.5rem;
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: 10dvmin;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: var(--font-weight-semibold);
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.1;
+  font-weight: var(--font-weight-semibold);
+  text-wrap: balance;
+}
+
+p:has(~ :where(p, ul, ol, pre, blockquote)) {
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: disc;
+  margin-inline-start: 4vmin;
+}
+
+.slide {
+  --angle-factor: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: var(--safe-area) 4vmin;
+  --hue: oklch(70% 0.25 calc(230 + calc(5 * var(--angle-factor))));
+  --bg: color-mix(in oklch, var(--light-dark) 5%, var(--hue) 10%);
+  --bg2: color-mix(in oklch, var(--bg) 20%, var(--light-dark));
+  background: radial-gradient(
+    100% 300.28% at 100% 0%,
+    var(--bg) 0%,
+    var(--bg) 49.94%,
+    var(--bg) 50.2%,
+    var(--bg2) 100%
+  );
+  color: color-mix(in oklch, var(--hue) 50%, var(--dark-light));
+
+  strong,
+  a {
+    color: color-mix(in oklch, currentColor 10%, var(--dark-light));
+  }
+
+  strong mark,
+  mark strong {
+    font-size: 2em;
+  }
+
+  figcaption {
+    color: color-mix(in oklch, currentColor 80%, var(--dark-light));
+  }
+
+  > hgroup {
+    margin-bottom: 6vmin;
+  }
+
+  > .slide-content {
+    flex: 1 0 auto;
+
+    &:has(figure:only-child) {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &:has(h1, h2) {
+    --angle-factor: 34 !important;
+
+    > .slide-content {
+      @apply flex justify-center items-center text-center flex-col;
+    }
+  }
+
+  > .slide-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+
+    > a:only-child {
+      margin-inline-start: auto;
+    }
+
+    &:has(> a:only-child) {
+      position: absolute;
+      bottom: var(--safe-area);
+      inset-inline-end: 4vmin;
+    }
+  }
+
+  &:first-of-type {
+    color: CanvasText;
+    background-image: url(assets/topography.svg);
+  }
+
+  &:nth-child(3n) {
+    --angle-factor: 10;
+  }
+
+  &:nth-child(4n) {
+    --angle-factor: 74;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: max(320px, min(80vw, 100vmin)); */
+    width: 100%;
+    margin: 0 auto 1em;
+    img {
+      width: auto;
+      max-height: 40vh;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
