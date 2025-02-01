@@ -38,7 +38,7 @@
         <div class="slide-footer">
           <p>
             Slides:
-            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+            <a href="https://thib.me/atag/">thib.me/atag/</a>
           </p>
           <a href="https://fosstodon.org/@thibaudcolas"><img
             src="assets/tails-128x128.webp"
@@ -94,7 +94,7 @@
       </section>
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
-          <h3 id="slide-N-heading">We need (accessible) authoring tools</h3>
+          <h3 id="slide-N-heading">We need authoring tools</h3>
         </hgroup>
         <div class="slide-content">
         <p>We need support for social media posts. Blogging. Apps. Videos. Slides. Livestreams. Chat. Crafting HTML by hand is possible but error-prone.</p>
@@ -113,8 +113,8 @@
       </section>
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
-          <h3 id="slide-N-heading"><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> from 2015</h3>
-
+          <h3 id="slide-N-heading"><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a></h3>
+          <p>Version 2.0 in 2015</p>
         </hgroup>
         <div class="slide-content">
         <ul>
@@ -226,20 +226,19 @@
         </hgroup>
         <div class="slide-content">
           <ul>
-          <li><a href="http://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a21">A.2.1. Make alternative content available to authors</a><ul><li>Alt text even for all images, decorative or no!</li></ul></li>
+          <li><a href="http://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a21">A.2.1. Make alternative content available to authors</a><ul><li>Alt text for all images, decorative or no!</li></ul></li>
           <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#sc_a321">A.3.2.1 Auto-Save</a><ul><li>Either no session time limit, or auto-saving</li></ul></li>
           <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a35">A.3.5. Provide text search of the content</a><ul><li><a href="https://hidde.blog/atag-a351-browser-built-in-search/">Browser built-in search</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#the_hidden_until_found_state"><code>hidden="until-found"</code></a> to the rescue?</li></ul></li>
           <li><a href="https://www.w3.org/TR/2015/NOTE-IMPLEMENTING-ATAG20-20150924/#gl_a42">A.4.2. Document the user interface, including all accessibility features</a><ul><li>💅🎉👏</li></ul></li>
           </ul>
         </div>
         <div class="slide-footer">
-          <p>Optional footer notes</p>
           <a href="#slide-N">N</a>
         </div>
       </section>
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
-          <h3 id="slide-N-heading">Documenting features: Wagtail</h3>
+          <h3 id="slide-N-heading">Documenting features: for developers <em>and</em> for users</h3>
         </hgroup>
         <div class="slide-content">
           <figure>
@@ -248,11 +247,9 @@
           <a href="https://guide.wagtail.org/en-latest/">Wagtail user guide</a> homepage
           </figcaption>
           </figure>
-          <p>Developer docs: 80% coverage of features.</p>
-          <p>User docs: <a href="https://wagtail.org/accessibility/atag-audit/#a422-document-all-features">52 of 145 features documented</a></p>
+          <p>Docs coverage for devs: 80%. For editors: <a href="https://wagtail.org/accessibility/atag-audit/#a422-document-all-features">52 of 145 features</a> (35%)</p>
         </div>
         <div class="slide-footer">
-          <p>Optional footer notes</p>
           <a href="#slide-N">N</a>
         </div>
       </section>
@@ -282,21 +279,31 @@
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
           <h3 id="slide-N-heading">B.2.3. Assist authors with managing alternative content for non-text content</h3>
+          <p>(as in – help people creating alt text (and captions))</p>
         </hgroup>
         <div class="slide-content">
-          <p>Alt text on social media</p>
+          <figure>
+          <img width="995" height="409" src="assets/mastodon-alt-text-ui.webp" alt="Screenshot collage of Mastodon. To the left the post editor, with in-progress content including an image. There is a warning triangle with the word 'Alt' in yellow. To the right, the interface to edit images, with a multiline text field: 'Describe for people who are blind or low-vision'. There is also a 'Detect text from picture' button below">
+          <figcaption>
+          Mastodon <a href="https://docs.joinmastodon.org/user/posting/#edit">alt text UI</a>
+          </figcaption>
+          </figure>
         </div>
         <div class="slide-footer">
-          <p>Optional footer notes</p>
           <a href="#slide-N">N</a>
         </div>
       </section>
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
-          <h3 id="slide-N-heading">B.2.4. Assist authors with accessible templates - B.2.4.2 Identify Template Accessibility</h3>
+          <h3 id="slide-N-heading">B.2.4. Assist authors with accessible templates</h3>
         </hgroup>
         <div class="slide-content">
-          <p>WordPress theme accessibility ready</p>
+          <figure>
+          <img width="1440" height="810" src="assets/wordpress-accessibility-ready-themes.webp" alt="Screenshot of the WordPress theme, accessibility ready tag in the tag filter">
+          <figcaption>
+          WordPress <a href="https://wordpress.org/themes/tags/accessibility-ready/">“Accessibility Ready” themes</a>.
+          </figcaption>
+          </figure>
         </div>
         <div class="slide-footer">
           <p>Optional footer notes</p>
@@ -308,22 +315,47 @@
           <h3 id="slide-N-heading">B.3.1. Assist authors in checking for accessibility problems</h3>
         </hgroup>
         <div class="slide-content">
-          <p>Wagtail & Sa11y accessibility checker</p>
+          <figure>
+          <img width="1440" height="810" src="assets/sa11y-tracking-wild-yeast.webp" alt="Sa11y accessibility checker widget, over a blog page. The widget spotted a heading error, and displays alt text for manual review">
+          <figcaption>
+          <a href="https://sa11y.netlify.app/">Sa11y</a> accessibility checker widget
+          </figcaption>
+          </figure>
         </div>
         <div class="slide-footer">
-          <p>Optional footer notes</p>
+
           <a href="#slide-N">N</a>
         </div>
       </section>
       <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
         <hgroup>
           <h3 id="slide-N-heading">B.3.2. Assist authors in repairing accessibility problems</h3>
+          <p>Example: alt text</p>
         </hgroup>
         <div class="slide-content">
-          <p>AI alt text</p>
+          <figure>
+          <img class="aspect-auto!" width="1626" height="1006" src="assets/ai-vs-existing-alt-text-quality.webp" alt="Bar chart comparing Wagtail AI vs. existing alt text quality, based on 441 homepages, scored by the accessibility team. Real-world alt text scores low. AI alt text scores higher, with 49% of AI alt texts scored 5/5 compared to 8% for real-world">
+          </figure>
         </div>
         <div class="slide-footer">
-          <p>Optional footer notes</p>
+          <p><a href="https://wagtail.org/blog/wagtail-accessibility-statistics-for-gaad-2024/">Review for Global Accessibility Awareness Day 2024</a></p>
+          <a href="#slide-N">N</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
+        <hgroup>
+          <h3 id="slide-N-heading">B.3.2. example implementation</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img class="aspect-auto!" width="995" height="409" src="assets/alt-text-suggestions-ui.webp" alt="Screenshot of the Wagtail Upload images interface. It says 3 images were uploaded successfully, and offers three different options to fill the description field">
+          <figcaption>
+          Image upload with <abbr title="Artificial Intelligence">AI</abbr>-generated descriptions
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
+          <p>See <a href="https://www.funka.com/en/projekt/cluster-feature-testing/feature-4-of-10-text-alternative-alt-text/">We 4 Authors Cluster - alt text</a></p>
           <a href="#slide-N">N</a>
         </div>
       </section>
@@ -335,7 +367,65 @@
           </hgroup>
         </div>
         <div class="slide-footer">
+
+          <a href="#slide-N">N</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
+        <hgroup>
+          <h3 id="slide-N-heading">Templates</h3>
+        </hgroup>
+        <div class="slide-content">
+          <figure>
+          <img width="1280" height="720" src="assets/github-projects-wcag-atag.webp" alt="Screenshot of the GitHub Projects interface, for 'WCAG 2.2 & ATAG 2.0', with a number of items tagged by WCAG SC, ATAG SC< status">
+          <figcaption>
+          <a href="https://github.com/users/thibaudcolas/projects/2/views/1">GitHub Projects template</a>
+          </figcaption>
+          </figure>
+        </div>
+        <div class="slide-footer">
           <p>Optional footer notes</p>
+          <a href="#slide-N">N</a>
+        </div>
+      </section>
+      <section class="slide" id="slide-N" aria-labelledby="slide-N-heading">
+        <hgroup>
+          <h3 id="slide-N-heading">Progress for Wagtail</h3>
+        </hgroup>
+        <div class="slide-content">
+          <table>
+<thead>
+<tr>
+<th scope="col">Conformance Level</th>
+<th scope="col"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr></th>
+<th scope="col">Part A</th>
+<th scope="col">Part B</th>
+</tr>
+</thead>
+<tbody><tr>
+<th scope="row">Pass</th>
+<td>28 (+6 🎉)</td>
+<td>14 (+2 🤘)</td>
+<td>14 (+4 🚀)</td>
+</tr>
+<tr>
+<th scope="row">Fail</th>
+<td>24 (-6)</td>
+<td>15 (-2)</td>
+<td>9 (-4)</td>
+</tr>
+<tr>
+<th scope="row">Not applicable</th>
+<td>13</td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+<caption>Wagtail 6.3 audit findings at the success criteria level</caption>
+</table>
+        </div>
+        <div class="slide-footer">
+          <p>Per <a href="https://www.w3.org/WAI/atag/report-tool/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> report tool</a></p>
           <a href="#slide-N">N</a>
         </div>
       </section>
@@ -356,7 +446,7 @@
         <div class="slide-footer">
           <p>
             Slides:
-            <a href="https://thib.me/tbx-css/">thib.me/tbx-css/</a>
+            <a href="https://thib.me/atag/">thib.me/atag/</a>
           </p>
           <a href="https://fosstodon.org/@thibaudcolas"><img
             src="assets/tails-128x128.webp"

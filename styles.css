@@ -5,7 +5,7 @@ body {
   --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 80%);
   --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 60%);
   color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
-  --safe-area: 4vmin;
+  --safe-area: 2vmin;
 }
 
 main {
@@ -28,6 +28,17 @@ a {
 pre {
   font-size: 1.5rem;
   text-wrap: pretty;
+}
+
+table {
+  border: 1px solid currentColor;
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 0.125em;
+    text-align: start;
+  }
 }
 
 h1 {
@@ -65,7 +76,7 @@ ul {
   flex-direction: column;
   position: relative;
   padding: var(--safe-area) 4vmin;
-  --hue: oklch(70% 0.25 calc(230 + calc(5 * var(--angle-factor))));
+  --hue: oklch(30% 0.4 calc(230 + calc(5 * var(--angle-factor))));
   --bg: color-mix(in oklch, var(--light-dark) 5%, var(--hue) 10%);
   --bg2: color-mix(in oklch, var(--bg) 20%, var(--light-dark));
   background: radial-gradient(
@@ -92,7 +103,7 @@ ul {
   }
 
   > hgroup {
-    margin-bottom: 6vmin;
+    margin-bottom: 4vmin;
   }
 
   > .slide-content {
@@ -142,17 +153,26 @@ ul {
     --angle-factor: 74;
   }
 
+  &:nth-child(5n) {
+    --angle-factor: 41;
+  }
+
   figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* max-width: max(320px, min(80vw, 100vmin)); */
     width: 100%;
-    margin: 0 auto 1em;
+    margin: 0 auto;
+
     img {
       width: auto;
-      max-height: 40vh;
+      max-height: 55vh;
       aspect-ratio: 16 / 9;
+    }
+
+    &:not(:only-child) {
+      margin-bottom: 0.5em;
     }
   }
 }
