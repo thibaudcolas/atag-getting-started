@@ -68,6 +68,15 @@ p:has(~ :where(p, ul, ol, pre, blockquote)) {
 ul {
   list-style: disc;
   margin-inline-start: 4vmin;
+
+  > li > ul {
+    list-style: circle;
+  }
+}
+
+ol {
+  list-style: decimal;
+  margin-inline-start: 4vmin;
 }
 
 .slide {
@@ -155,6 +164,10 @@ ul {
 
   &:nth-child(5n) {
     --angle-factor: 41;
+  }
+
+  &:nth-child(7n) {
+    --angle-factor: 63;
   }
 
   figure {

@@ -667,3 +667,7 @@ Proposed actions:
 **\[Conformance\]**.
 
 Proposed actions:
+
+---
+
+[ATAG Wagtail template](https://github.com/thibaudcolas/atag-getting-started/blob/main/atag_wagtail_template.md) by [Thibaud Colas](https://thib.me/) is marked with [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1).
